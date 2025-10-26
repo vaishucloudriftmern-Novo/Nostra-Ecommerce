@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Hide horizontal scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<body class="m-0 p-0 overflow-x-hidden">
+
+    <!-- 🔹 Top Black Banner -->
+    <div id="topBanner" class="bg-black w-full p-2 flex items-center justify-between transition-all duration-500">
+        <p class="text-white text-center flex-1">Sign UP and Get 20% OFF for your first order</p>
+        <button id="closeBanner" class="text-white text-xl font-bold pr-3 hover:text-gray-400 cursor-pointer">×</button>
+    </div>
+
+    <!-- 🔹 Navbar -->
+    <nav class="bg-white p-5 flex items-center justify-between shadow-xl sticky top-0 z-10">
+         <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
+            class="w-5 h-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <h1 class="text-2xl font-bold">Nostra</h1>
+       
+        <ul class="hidden md:flex gap-8 text-gray-600">            
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li id="arrival"><a class="hover:underline hover:text-black cursor-pointer" >New Arrival</a></li>
+            <li id="wanted"><a class="hover:underline hover:text-black cursor-pointer">Most Wanted</a></li>
+            <li><a class="hover:underline hover:text-black" href="collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Side-Navbar -->
+     <section id="sidenav" class="bg-gray-500 fixed z-20 top-0 transition-all duration-1000 " style="width:50%;height:100vh;left:-50%;">
+        <div class="p-5 text-left">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+     <ul class="flex-col gap-5 items-center text-gray-900">            
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+
+    <!-- 🔹 Carousel Section -->
+    <div class="relative w-screen h-screen overflow-hidden">
+
+        <!-- Slides (backgrounds move) -->
+        <div id="slider" class="flex transition-transform duration-700 ease-in-out ">
+            <div class="flex-none w-screen min-h-screen bg-cover bg-center"
+                style="background-image: url('images/shopping-1.webp')"></div>
+            <div class="flex-none w-screen min-h-screen bg-cover bg-center"
+                style="background-image: url('images/shopping-2.jpg')"></div>
+            <div class="flex-none w-screen min-h-screen bg-cover bg-center"
+                style="background-image: url('images/shopping-3.jpeg')"></div>
+        </div>
+
+        <!-- 🔹 Text Overlay (sticky, does NOT move) -->
+        <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 pointer-events-none">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Level Up your style with our</h1>
+            <p class="text-lg md:text-2xl mb-6">summer collection</p>
+            <button
+                class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition pointer-events-auto">Shop
+                Now →</button>
+        </div>
+
+        <!-- 🔹 Arrows -->
+        <button id="prev"
+            class="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 z-10">❮</button>
+        <button id="next"
+            class="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 z-10">❯</button>
+
+    </div>
+    <div class="w-full m-0 bg-white flex  gap-4 mt-10 items-center">
+        <h1 class="font-bold text-2xl p-5">Brands</h1>
+
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 p-5 mt-5">
+        <h4 class="flex items-center gap-2"><img src="./icons/be-social-badge.png" width="25" height="25">Puma</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/adidas.png" width="25" height="25">Adidas</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/simple.png" width="25" height="25">Simple</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/leaves.png" width="25" height="25">Leaves</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/be-social-badge.png" width="25" height="25">BeHance</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/twitch.png" width="25" height="25">Twitch</h4>
+        <h4 class="flex items-center gap-2"><img src="./icons/leaves.png" width="25" height="25">Leaves</h4>
+
+    </div>
+    <div class=" p-5 grid grid-cols-2 items-center gap-4 mt-10">
+        <h2 class="font-bold  w-50">We provide Best<br> Customer Experiance</h2>
+        <p class="w-50">||We ensure that our customer have the best shopping Experiance </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex mt-10 p-5 ">
+        <div class="bg-gray-300 w-25 h-40 m-2 flex-col items-center justify-center text-center p-4 rounded-lg">
+            <img src="./icons/check-mark.png" width="25" height="25" class="mb-2">
+            <h5 class="font-bold text-left">Original products</h5>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+        <div class="bg-gray-300 w-25 h-40 m-2 flex-col items-center justify-center text-center p-4 rounded-lg">
+            <img src="./icons/smile.png" width="25" height="25">
+            <h5 class="font-bold text-left">Satisfaction guarantee</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cum quasi vel
+        </div>
+        <div class="bg-gray-300 w-25  h-40 m-2 flex-col items-center justify-center text-center p-4 rounded-lg">
+            <img src="./icons/data-cleaning.png" width="25" height="25">
+            <h5 class="font-bold text-left">New Arrival EveryDay</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cum quasi vel,
+        </div>
+        <div class="bg-gray-300 w-25  h-40 m-2 flex-col items-center justify-center text-center p-4 rounded-lg">
+            <img src="./icons/free-shipping.png" width="25" height="25">
+            <h5 class="font-bold text-left">Fast and Free Shipping</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cum quasi vel,
+            </p>
+        </div>
+    </div>
+    <div id="newarrival">
+        <h1 class="font-bold text-2xl mt-5 p-5">New Arrival</h1>
+        <section class="grid grid-cols-2 sm:grid-cols-4  gap-4 m-2 p-5">
+            <!-- image-1 -->
+            <div class="relative w-full h-64">
+                <img src="./images/img-1.avif" class="w-full h-full object-cover rounded-lg">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span class="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Shop Now →
+                    </span>
+                </button>
+            </div>
+            <!-- image-2 -->
+            <div class="relative w-full h-64">
+                <img src="./images/img-2.webp" class="w-full h-full object-cover rounded-lg">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span class="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Shop Now →
+                    </span>
+                </button>
+            </div>
+
+            <div class="relative w-full h-64">
+                <img src="./images/img-3.webp" class="w-full h-full object-cover rounded-lg">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span class="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Shop Now →
+                    </span>
+                </button>
+            </div>
+            <!-- image-3 -->
+            <div class="relative w-full h-64">
+                <img src="./images/img-4.jpg" class="w-full h-full object-cover rounded-lg">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <span class="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Shop Now →
+                    </span>
+                </button>
+            </div>
+
+
+        </section>
+    </div>
+    <div id="mostwanted">
+        <h1 class=" font-bold text-2xl p-5 mt-10">Most wanted</h1>
+
+    </div>
+    <div class="overflow-x-auto scrollbar-hide whitespace-nowrap p-4 space-x-4 flex  snap-x snap-mandatory">
+        <!-- 🔹 Image Card (repeat this 8 times) -->
+          <!-- 🔹 Image 1-->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-1.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png" class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer">
+        </div>
+
+        <!-- 🔹 Image 2 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-2.webp" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png" class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer">
+        </div>
+
+        <!-- 🔹 Image 3 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-3.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <!-- 🔹 Image 4 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-4.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <!-- 🔹 Image 5 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-5.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <!-- 🔹 Image 6 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-6.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <!-- 🔹 Image 7 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-7.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <!-- 🔹 Image 8 -->
+        <div class="inline-block w-1/4 flex-shrink-0 relative snap-start">
+            <img src="./images/arrival-8.jpeg" class="w-full h-64 object-cover rounded-lg">
+            <img src="./icons/sale.png" class="absolute top-2 left-2 min-w-10 h-10">
+            <img src="./icons/heart.png"
+                class="absolute bottom-2 right-2 w-6 h-6 cursor-pointer hover:scale-110 transition">
+        </div>
+    </div>
+
+    <div class="bg-slate-600 p-5 grid grid-cols-2 items-center gap-4 mt-10">
+        <img src="./images/img-5.jpeg" class="w-64 h-64 mt-5 ml-40">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-400">Limited Offer</h1>
+            <p class="font-bold text-2xl text-gray-400">35% off on this for the first 30 Customers </p>
+             <button
+                class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition pointer-events-auto">Shop
+                Now →</button>
+        </div>
+
+    </div>
+     <!-- News Letter -->
+    <section class="text-center">
+        <h1 class="text-3xl font-bold mt-5 text-center">Join Our News Letter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts,updates and more</p>
+        <input type="text" class="border border-black p-2 m-3" style="width:80%">
+        <br>
+        <button class="bg-black text-white p-2 m-1 underline">Subscribe-></button>
+    </section>
+    <!-- Footer -->
+     <section class="bg-gray-600 p-10">
+        <h1 class="text-4xl font-bold mt-5">Nostra</h1>
+        <p class="mt-5">The Standard chunk of Lorem ipsum used since  the 1500s is reproduced  below for  those interest</p>
+        <p class="mt-5">@ 2023 Nostra.com</p>
+
+     </section>
+     <!-- Javascript -->
+      <script src="index.js"></script>
+     <script src="carousel.js">
+
+     </script>
+    </body>
+
+</html>

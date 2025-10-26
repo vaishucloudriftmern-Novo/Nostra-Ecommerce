@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden">
+    <!-- 🔹 Top Black Banner -->
+    <div id="topBanner" class="bg-black w-full p-2 flex items-center justify-between transition-all duration-500">
+        <p class="text-white text-center flex-1">Sign UP and Get 20% OFF for your first order</p>
+        <button id="closeBanner" class="text-white text-xl font-bold pr-3 hover:text-gray-400 cursor-pointer">×</button>
+    </div>
+
+    <!-- 🔹 Navbar -->
+    <nav class="bg-white p-5 flex items-center justify-between shadow-xl sticky top-0 z-10">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
+            class="w-5 h-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <h1 class="text-2xl font-bold">Nostra</h1>
+        
+        <ul class="hidden md:flex gap-8 text-gray-600">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+     <!-- Side-Navbar -->
+     <section id="sidenav" class="bg-gray-500 fixed z-20 top-0 transition-all duration-1000 " style="width:50%;height:100vh;left:-50%;">
+        <div class="p-5 text-left">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+     <ul class="flex-col gap-5 items-center text-gray-900">            
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="collection.html">Collections</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+    <!-- 🔹 Product Section -->
+    <section class="p-10">
+        <h1 class="text-3xl font-bold text-center mb-8">Our Products</h1>
+
+        <div class="flex">
+            <!-- 🔹 Sidebar Filter -->
+            <aside class="w-1/4 pr-6 border-r border-gray-950">
+                <h2 class="text-xl font-semibold mb-4">Occasion</h2>
+                <div class="space-y-3">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="summer" class="mr-2"> Summer
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" id="winter" class="mr-2"> Winter
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" id="party" class="mr-2"> Party
+                    </label>
+                </div>
+            </aside>
+
+            <!-- 🔹 Product Grid -->
+            <div id="productContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 flex-1">
+                <div class="product" data-type="summer">
+                    <img src="./images/sum-1.jpg" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Floral summer shirt</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="summer">
+                    <img src="./images/sum-2.avif" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Summer green</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="summer">
+                    <img src="./images/sum-3.webp" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Party floral</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="party">
+                    <img src="./images/coll-1.webp" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Printed party wear</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="party">
+                    <img src="./images/coll-2.avif" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Party floral</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="party">
+                    <img src="./images/col-3.jpg" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Winter floral</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="winter">
+                    <img src="./images/party-1.jpg" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Winter dress</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="winter">
+                    <img src="./images/party-2.webp"class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Winter party</h1>
+                    <p>$20</p>
+                </div>
+
+                <div class="product" data-type="winter">
+                    <img src="./images/party-3.jpeg" class="w-full h-80 object-cover hover:shadow-xl transform hover:-translate-y-2">
+                    <h1>Winter party</h1>
+                    <p>$20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Footer -->
+    <section class="bg-gray-600 p-10">
+        <h1 class="text-4xl font-bold mt-5">Nostra</h1>
+        <p class="mt-5">The standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested.
+        </p>
+        <p class="mt-5">@2021 Nostra.com</p>
+    </section>
+
+ <script src="collection.js"></script>   
+</body>
+
+</html>
